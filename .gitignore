@@ -1,0 +1,22 @@
+# Node
+node_modules
+
+# React
+dist
+
+# VSCode
+.vscode
+
+# Logs
+logs
+
+# Dotnet
+bin
+obj
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
