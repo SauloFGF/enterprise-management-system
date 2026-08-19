@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnterpriseManagement.Application\EnterpriseManagement.Application.csproj" />
+    <ProjectReference Include="..\EnterpriseManagement.Shared\EnterpriseManagement.Shared.csproj" />
+    <ProjectReference Include="..\EnterpriseManagement.Infrastructure\EnterpriseManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

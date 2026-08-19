@@ -1,22 +1,103 @@
-# Node
-node_modules
+# =========================
+# Node / React / Vite
+# =========================
 
-# React
-dist
-
-# VSCode
-.vscode
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+.cache/
 
 # Logs
-logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Dotnet
-bin
-obj
-
-# Environment
+# Env
 .env
+.env.*
+!.env.example
 
+# =========================
+# Visual Studio
+# =========================
+
+.vs/
+**/.vs/
+
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# =========================
+# .NET
+# =========================
+
+bin/
+obj/
+
+**/bin/
+**/obj/
+
+TestResults/
+
+# Publish
+publish/
+
+# NuGet
+packages/
+*.nupkg
+
+# ASP.NET
+appsettings.Development.json
+
+# =========================
+# Database
+# =========================
+
+*.mdf
+*.ldf
+
+# SQLite (caso utilize)
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+
+# =========================
 # OS
+# =========================
+
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# =========================
+# Temporary
+# =========================
+
+tmp/
+temp/
+
+# =========================
+# Archives
+# =========================
+
+*.zip
+*.rar
+*.7z
