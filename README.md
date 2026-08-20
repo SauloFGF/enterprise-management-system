@@ -8,6 +8,32 @@ Sistema de Gestão Empresarial.
 
 - React
 - TypeScript
+- Vite
+
+Estrutura inicial:
+
+src/
+
+├── app
+├── routes
+├── pages
+├── components
+├── layouts
+├── services
+├── hooks
+├── contexts
+├── types
+├── utils
+├── validations
+└── assets
+
+O frontend será uma SPA responsável por:
+- Login
+- Dashboard
+- Usuários
+- Clientes
+- Produtos
+- Pedidos
 
 ### Backend
 
