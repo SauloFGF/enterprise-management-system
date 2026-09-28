@@ -1,37 +1,37 @@
-# Architecture and Product Decisions
+# Decisões de Arquitetura e Produto
 
 Este diretório registra as decisões aprovadas para desbloquear a implementação do Sistema de Gestão Empresarial.
 
-**Status deste conjunto:** APPROVED  
+**Status deste conjunto:** APROVADO  
 **Data:** 24/09/2026  
 **Responsável:** Product Owner / Tech Lead  
 **Fonte de verdade funcional:** `Especificacao_Sistema_Gestao_Empresarial.md`
 
 As decisões abaixo complementam a especificação. Nenhuma delas altera os requisitos explícitos de MVP, roles, endpoints, JWT, refresh token, soft delete, segurança ou testes.
 
-| ID      | Título                          | Status   |
-| ------- | ------------------------------- | -------- |
-| DEC-001 | API error contract              | APPROVED |
-| DEC-002 | Pagination and filters          | APPROVED |
-| DEC-003 | DTO and validation rules        | APPROVED |
-| DEC-004 | Soft delete scope               | APPROVED |
-| DEC-005 | Referential delete behavior     | APPROVED |
-| DEC-006 | Client document rules           | APPROVED |
-| DEC-007 | Money and rounding              | APPROVED |
-| DEC-008 | Order status transitions        | APPROVED |
-| DEC-009 | Order items and transaction     | APPROVED |
-| DEC-010 | User password and bootstrap     | APPROVED |
-| DEC-011 | JWT configuration               | APPROVED |
-| DEC-012 | Refresh token lifecycle         | APPROVED |
-| DEC-013 | Browser token storage           | APPROVED |
-| DEC-014 | CORS origins                    | APPROVED |
-| DEC-015 | Rate limiting                   | APPROVED |
-| DEC-016 | Security headers                | APPROVED |
-| DEC-017 | Dashboard metrics               | APPROVED |
-| DEC-018 | Frontend routes and states      | APPROVED |
-| DEC-019 | API style                       | APPROVED |
-| DEC-020 | Test database                   | APPROVED |
-| DEC-021 | CI/CD platform                  | APPROVED |
-| DEC-022 | Runtime versions                | APPROVED |
-| DEC-023 | Connection, migrations and seed | APPROVED |
-| DEC-024 | Logging and correlation IDs     | APPROVED |
+| ID      | Título                          | Status    |
+| ------- | ------------------------------- | --------- |
+| DEC-001 | Contrato de erro da API         | APROVADO  |
+| DEC-002 | Paginação e filtros             | APROVADO  |
+| DEC-003 | DTO e regras de validação       | APROVADO  |
+| DEC-004 | Escopo do soft delete           | APROVADO  |
+| DEC-005 | Comportamento referencial de exclusão | APROVADO  |
+| DEC-006 | Regras de documento do Cliente   | APROVADO  |
+| DEC-007 | Valores monetários e arredondamento | APROVADO  |
+| DEC-008 | Transições de status do Pedido  | APROVADO  |
+| DEC-009 | Itens do Pedido e transação     | APROVADO  |
+| DEC-010 | Senha de Usuário e bootstrap    | APROVADO  |
+| DEC-011 | Configuração do JWT             | APROVADO  |
+| DEC-012 | Ciclo de vida do refresh token  | APROVADO  |
+| DEC-013 | Armazenamento de token no navegador | APROVADO  |
+| DEC-014 | Origens do CORS                 | APROVADO  |
+| DEC-015 | Rate limiting                   | APROVADO  |
+| DEC-016 | Cabeçalhos de segurança         | APROVADO  |
+| DEC-017 | Métricas do Dashboard           | APROVADO  |
+| DEC-018 | Rotas e estados do Frontend     | APROVADO  |
+| DEC-019 | Estilo da API                   | APROVADO  |
+| DEC-020 | Banco de dados de testes         | APROVADO  |
+| DEC-021 | Plataforma CI/CD                | APROVADO  |
+| DEC-022 | Versões de runtime              | APROVADO  |
+| DEC-023 | Conexão, migrations e seed      | APROVADO  |
+| DEC-024 | Logging e correlation IDs       | APROVADO  |

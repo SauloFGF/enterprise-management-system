@@ -1,9 +1,22 @@
+using EnterpriseManagement.Application.Interfaces;
+using EnterpriseManagement.Infrastructure.Persistence.Context;
+using EnterpriseManagement.Infrastructure.Repositories;
+using EnterpriseManagement.Infrastructure.Security;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString =
+    builder.Configuration.GetConnectionString("Postgres");
+
+Console.WriteLine($"CONNECTION: {connectionString}");
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddDbContextPool<Bloggin>
+builder.Services.AddDbContextPool<ApplicationDbContext>(opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
 var app = builder.Build();
 
