@@ -9,5 +9,6 @@
     <Project Path="src/EnterpriseManagement.Domain/EnterpriseManagement.Domain.csproj" />
     <Project Path="src/EnterpriseManagement.Infrastructure/EnterpriseManagement.Infrastructure.csproj" />
     <Project Path="src/EnterpriseManagement.Shared/EnterpriseManagement.Shared.csproj" />
+    <Project Path="src/EnterpriseManagement.Tests/EnterpriseManagement.Tests.csproj" />
   </Folder>
 </Solution>

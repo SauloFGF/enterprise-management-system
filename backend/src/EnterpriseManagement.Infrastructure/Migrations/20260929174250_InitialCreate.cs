@@ -20,11 +20,11 @@ namespace EnterpriseManagement.Infrastructure.Migrations
                     Email = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     PasswordHash = table.Column<string>(type: "text", nullable: false),
                     Role = table.Column<string>(type: "text", nullable: false),
-                    RefreshToken = table.Column<string>(type: "text", nullable: false),
-                    RefreshTokenExpiresAt = table.Column<string>(type: "text", nullable: false),
-                    IsDeleted = table.Column<string>(type: "text", nullable: false),
-                    CreatedAt = table.Column<string>(type: "text", nullable: false),
-                    UpdatedAt = table.Column<string>(type: "text", nullable: false)
+                    RefreshToken = table.Column<string>(type: "text", nullable: true),
+                    RefreshTokenExpiresAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {

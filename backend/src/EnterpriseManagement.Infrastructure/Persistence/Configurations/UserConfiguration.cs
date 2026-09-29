@@ -22,5 +22,26 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.HasIndex(x => x.Email)
             .IsUnique();
+
+        builder.Property(x => x.PasswordHash)
+            .IsRequired();
+
+        builder.Property(x => x.Role)
+            .IsRequired();
+
+        builder.Property(x => x.RefreshToken)
+            .IsRequired(false);
+
+        builder.Property(x => x.RefreshTokenExpiresAt)
+            .IsRequired(false);
+
+        builder.Property(x => x.IsDeleted)
+            .IsRequired();
+
+        builder.Property(x => x.CreatedAt)
+            .IsRequired();
+
+        builder.Property(x => x.UpdatedAt)
+            .IsRequired(false);
     }
 }
