@@ -1,7 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using EnterpriseManagement.Application.Authentication;
+using EnterpriseManagement.Application.Configuration;
 using EnterpriseManagement.Application.Interfaces;
 using EnterpriseManagement.Domain.Entities;
 using Microsoft.Extensions.Options;

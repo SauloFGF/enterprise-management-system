@@ -1,5 +1,5 @@
 using System.Text;
-using EnterpriseManagement.Application.Authentication;
+using EnterpriseManagement.Application.Configuration;
 using EnterpriseManagement.Application.Interfaces;
 using EnterpriseManagement.Infrastructure.Authentication;
 using EnterpriseManagement.Infrastructure.Persistence.Context;
@@ -20,7 +20,10 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(opt => opt.UseNpgsql(bui
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
-builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(JwtOptions.SectionName));
+builder.Services.Configure<CorsOptions>(builder.Configuration.GetSection(CorsOptions.SectionName));
+builder.Services.Configure<RateLimitOptions>(builder.Configuration.GetSection(RateLimitOptions.SectionName));
+builder.Services.Configure<SecurityHeadersOptions>(builder.Configuration.GetSection(SecurityHeadersOptions.SectionName));
 
 var jwtSection = builder.Configuration.GetSection("Jwt");
 
@@ -54,10 +57,12 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Seed database
-using (var scope = app.Services.CreateScope())
+if (app.Environment.IsDevelopment())
 {
+    using var scope = app.Services.CreateScope();
+
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
     await UserSeed.SeedAsync(context);
 }
 
