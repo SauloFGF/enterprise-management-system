@@ -16,6 +16,13 @@ public static class UserSeed
 
         var passwordHasher = new PasswordHasher();
 
+        // Passwords come from environment variables in Development only.
+        // Never hardcode passwords in source code.
+        var adminPassword = Environment.GetEnvironmentVariable("SEED_ADMIN_PASSWORD")
+            ?? throw new InvalidOperationException("SEED_ADMIN_PASSWORD environment variable is not set.");
+        var operatorPassword = Environment.GetEnvironmentVariable("SEED_OPERATOR_PASSWORD")
+            ?? throw new InvalidOperationException("SEED_OPERATOR_PASSWORD environment variable is not set.");
+
         var users = new List<User>
         {
             new()
@@ -23,7 +30,7 @@ public static class UserSeed
                 Id = Guid.Parse("11111111-1111-1111-1111-111111111111"),
                 Name = "Admin User",
                 Email = "admin@example.com",
-                PasswordHash = passwordHasher.Hash("Admin@123"),
+                PasswordHash = passwordHasher.Hash(adminPassword),
                 Role = "Admin",
                 IsDeleted = false,
                 CreatedAt = DateTime.UtcNow
@@ -31,10 +38,10 @@ public static class UserSeed
             new()
             {
                 Id = Guid.Parse("22222222-2222-2222-2222-222222222222"),
-                Name = "Test User",
-                Email = "test@example.com",
-                PasswordHash = passwordHasher.Hash("Test@123"),
-                Role = "User",
+                Name = "Operator User",
+                Email = "operator@example.com",
+                PasswordHash = passwordHasher.Hash(operatorPassword),
+                Role = "Operator",
                 IsDeleted = false,
                 CreatedAt = DateTime.UtcNow
             }

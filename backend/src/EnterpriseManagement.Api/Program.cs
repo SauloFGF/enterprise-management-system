@@ -74,7 +74,11 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 
-// app.UseHttpsRedirection(); // Desabilitado para testes locais
+// HTTPS redirection enabled outside Development
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAuthentication();
 

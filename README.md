@@ -37,8 +37,9 @@ O frontend será uma SPA responsável por:
 
 ### Backend
 
-- .NET
-- Entity Framework
+- .NET 10
+- Entity Framework Core
+- PostgreSQL
 
 ### Banco
 
@@ -52,3 +53,32 @@ O frontend será uma SPA responsável por:
 - Produtos
 - Pedidos
 - Dashboard
+
+## Setup
+
+### Backend
+
+```bash
+# Restore packages
+dotnet restore EnterpriseManagement.slnx
+
+# Build
+dotnet build EnterpriseManagement.slnx
+```
+
+See `docs/backend-configuration.md` for detailed environment configuration, JWT, CORS, database, and migrations setup.
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Documentation
+
+- [Backend Configuration](docs/backend-configuration.md)
+- [Development Backlog](docs/DEVELOPMENT_BACKLOG.md)
+- [Architecture](docs/architecture.md)
+- [Decisions](docs/decisions/README.md)
